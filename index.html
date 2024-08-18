@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="text-center" id="title">Website User Experience Survey</h1>
+            <p class="description text-center" id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+        
+        <form id="survey-form">
+            <!-- Name Input -->
+            <div class="input-element">
+              <label id="name-label" for="name">What is your Name?</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control" required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="input-element">
+                <label id="email-label" for="email">What is your email address?</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control" required>
+            </div>
+      
+            <!-- Number Input -->
+            <div class="input-element">
+                <label id="number-label" for="number">What is your Age? (between 18 and 65):</label>
+                <input type="number" id="number" name="age" min="18" max="65" placeholder="Enter your age" class="form-control" required>
+            </div>
+
+        <!--dropdown-->
+            <div class="input-element">
+                <p>How would you rate your experience using our website?</p>
+                <select name="feedback-method" id="dropdown" class="form-control" required>
+                    <option disabled selected value>Select an Option</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+
+        <!-- Recommendation Radio Buttons -->
+            <div class="input-element">
+                <p>How likely are you to recommend our website to others?</p>
+                <label><input type="radio" value="definitely" class="input-radio" checked>Definitely</label>
+                <label><input type="radio" value="probably" class="input-radio">Probably</label>
+                <label><input type="radio" value="not-sure" class="input-radio">Not Sure</label>
+                <label><input type="radio" value="unlikely" class="input-radio">Unlikely</label>
+            </div>
+
+        <!-- Satisfaction Radio Buttons -->
+            <div class="input-element">
+                <p>How satisfied are you with our website’s design?</p>
+                <label><input type="radio" name="satisfaction" value="very-satisfied" class="input-radio" checked> Very Satisfied</label>
+                <label><input type="radio" name="satisfaction" value="somewhat-satisfied" class="input-radio"> Somewhat Satisfied</label>
+                <label><input type="radio" name="satisfaction" value="not-satisfied" class="input-radio"> Not Satisfied</label>
+            </div>
+
+        <!--checkbox-options-->
+            <div class="input-element">
+                <p for="">Which features do you use most often?
+                    <span class="clue">(check all that apply)</span>
+                </p>
+                <label><input type="checkbox" value="home page" class="input-checkbox">Home Page</label>
+                <label><input type="checkbox" value="blog" class="input-checkbox">Blog</label>
+                <label><input type="checkbox" value="contact us" class="input-checkbox">Contact Us</label>
+                <label><input type="checkbox" value="support" class="input-checkbox">Support</label>
+                <label><input type="checkbox" value="product pages" class="input-checkbox">Product Pages</label>
+            </div>   
+
+        <!--open-ended text area-->
+            <div class="input-element">
+                <p>What could we improve?</p>
+                <textarea class="input-textarea" placeholder="Write your feedback here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="input-element">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
